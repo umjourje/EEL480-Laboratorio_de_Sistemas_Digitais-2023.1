@@ -1,7 +1,13 @@
-# EEL480-Laboratorio_de_Sistemas_Digitais-2023.1
+# EEL480 - Relatório do Projeto de Laboratório de Sistemas Digitais - 2023.1
 
 ## Integrantes
-> Aline Capucho, Afonso Mateus Pinto, Juliana Dal Piaz e Renan Carvalho Gomes
+> Aline Capucho
+
+> Afonso Mateus Pinto
+
+> Juliana Dal Piaz
+
+> Renan Carvalho Gomes
 
 ## Conteudo
 1. [Requisitos](#requisitos)
@@ -34,6 +40,7 @@ que deverão ser mostrados no LEDs.
 
 
 ## Primeiros Testes
+Nessa seção apresentaremos os passos necessários para configurar os ambientes de desenvolvimento, compilação e testes, tanto em casa quanto no laboratório.
 
 ### Configuração de Ambiente no Laboratório
 
@@ -64,15 +71,18 @@ que deverão ser mostrados no LEDs.
 - Depois, em Enviar para a placa
 
 ### Configuração de Ambiente em Casa
-Para o passo a passo da configuração do simulador de FPGA Quartus Prime, ir para o [ANEXO A](#anexo-a), que contém as figuras do processo de instalação desse software.
+**Nome do Simulador: Quartus II Prime Lite**
+[Link para site Intel](https://fpgasoftware.intel.com/?edition=lite)
+Para o passo a passo da configuração do simulador de FPGA Quartus Prime, ir para o [ANEXO A](#anexo-a), que contém as figuras com explicação do processo de instalação desse software.
 
 ### Teste de Sanidade
+
 Uma vez que ficou estabelecido o passo a passo de como ligar a placa e realizar checagem de sintaxe, compilação, atrelamento de pinagem e testes, tentamos rodar um código simples de uma estrutura básica de ALU, sem sucesso.
 
 Após várias tentativas de refazer esse código, pensamos em um teste de sanidade para testar a conexão da placa com o programa e nossa capacidade de escrever códigos funcionais em VHDL, seguimos com o projeto.
 
-> Abaixo um GIF indicando o sucesso do teste
-<video src='https://raw.githubusercontent.com/umjourje/EEL480-Laboratorio_de_Sistemas_Digitais-2023.1/main/images/working_sanity_test.mp4' width=180/>
+> Abaixo um vídeo indicando o sucesso do teste
+<video src='https://raw.githubusercontent.com/umjourje/EEL480-Laboratorio_de_Sistemas_Digitais-2023.1/main/images/working_sanity_test.mp4' width=180></video>
 
 Abaixo o código que foi testado com sucesso. Seu objetivo era replicar nos LEDs as entradas dos 4 switches.
 
@@ -100,33 +110,63 @@ end Behavioral;
 ```
 
 ## Projeto
-Ideia geral de projeto
+Nessa seção apresentaremos o que é uma ALU, os conceitos básicos para compreendê-la e, a artir disso, como organizamos esse projeto. Descrevendo Entradas, Saídas, Operações e Módulos construídos.
+
+Escolhemos implementar operações que utilizassem em sua maioria um único múdulo *FullAdder* dado ue uma das principais otimizações da ALU é o uso de pouycos módulos para várias operações, uma vez que essa solução economiza espaço físico de circuito integrado.
+
 ### O que é uma ALU?
+ALU é um acrônimo para *Arithmetic Logic Unit*, um módulo que realiza diversos tipos de operações matemáticas e lógicas dentro de uma CPU (Central Processing Unit).
+
+Para o desenvolvimento de uma CPU como a conhecemos, as operações mais básicas e essenciais para a estrutura funcional se materializar são realizadas pela ALU. E num pipeline ótimo, em 1 ciclo de clock.
 
 
-### Quais operações?
+> MELHORAR AQUI
+
+### Códigos das Operações
+
+**Mapeamento de cada operação para seu respectivo código binário**
+- Soma: **000**
+- Incremento de 1: **001**
+- Subtração de Complemento de 2: **010**
+- Troca de Sinal: **011**
+- Decremento de 1: **100**
+- OPERACAO AQUI: (XOR?) **101**
+- Multiplicar por 2: **110**
+- OPERACAO AQUI: (CLEAR?) **111**
 
 ### Quais são nossas entradas e saídas?
-> Entradas: 
-X := Número binário de 4 bits
-Y := Número binário de 4 bits
-Cin := Número binário de 1 bit
+**Entradas:**
+- X := Número binário de 4 bits
+- Y := Número binário de 4 bits
+- Cin := Número binário de 1 bit
 
-> Saídas:
-- 4 flags (1 bit): zero, negativo, overflow, cout
-Y := Número binário de 4 bits
-### Mapeamento de cada operação para o código binário de cada operação
+**Saídas:**
+- Z := Número binário de 4 bits
+- Zero (flag) := 1bit
+- Negativo (flag) := 1bit
+- Overflow (flag) := 1bit
+- Cout (flag) := 1bit
 
 
 ## Modularização
-separacao logica de componentes a serem reutilizados
+
+Estrutura Interna e do módulo Somador Completo (Full Adder):
 ![HA](./images/half_adders-full_adder.jpeg)
 
-## Unindo tudo
+Estrutura do módulo Incremento de 1:
+![incremento1](./images/incremento_1.jpeg)
+
+Estrutura dos módulos Somador e Subtrator de 4 bits:
+![somador_subtrator](./images/mod_subtrator_somador.jpeg)
+
+### Unindo tudo
 como juntamos todos os modelos necessarios para o funcionamento de acordo com o projeto
+[codigo-full-adder](./modulos/FullAdder.vhd)
 
 ## Simulação
-Quartus prime em casa para rodar os codigod VHDL e checar a sintaxe.
+Logisim para gerar imagens de projeto
+Quartus prime em casa para rodar os codigos VHDL e checar a sintaxe.
 
 
-## Anexo A
+# Anexo A
+> colocar as fotos do passo a passo da instalação do quartus
