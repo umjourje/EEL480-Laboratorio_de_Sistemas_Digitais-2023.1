@@ -33,9 +33,38 @@ que deverão ser mostrados no LEDs.
 1. As entradas da ULA são geradas por um módulo auxiliar, um contador, parte integrante do projeto. As duas entradas são mostradas, juntamente com o resultado, nos displays de 7 segmentos disponíveis. Os LEDs são utilizados para mostrar as quatro “flags”. Os operandos vão mudando, em ordem crescente, a cada 2 segundos.
 
 
-## Primeiros testes
+## Primeiros Testes
 
-### Configuração de Ambiente
+### Configuração de Ambiente no Laboratório
+
+**Nome do Simulador: ISE Simulator (ISim)**
+[Link para site Xilinx](https://www.xilinx.com/products/design-tools/isim.html)
+> Abrir um porjeto novo
+- Criar projeto sem template adicionando as características da placa;
+    - Family: Spartan3AN 
+    - Device: XC3S700AN
+    - Package: FGG484
+    - Preferred Language: VHDL
+- Criar novo arquivo COM MESMO NOME DO PROJETO com extensão .vhd;
+- Todos os módulos que serão chamados no arquivo principal, que tem o mesmo nome do projeto, devem estar em "Sub arquivos" daquele;
+
+> Após escrever o código:
+- No menu lateral esquerdo clicar em 'Check Synthesis';
+- Para prosseguir é necessário que esse processo seja executado sem erros;
+
+> Mapeamento das portas (Pre-synthesis)
+- No Clicar em: Menu superior -> Tools -> Plan Ahead -> I/O Pin Planning (PlanAhead) - Pre-Synthesis -> Apertar YES -> Abre a telinha para mapear as portas de input/output com as da placa
+- Na coluna SITE, mapear os códigos dos itens na placa com os input / output Depois de mapear, volta pra tela normal;
+
+> Compilação 
+
+- Voltar pra tela do código -> Configure Target Device -> (iMPACT)
+- Tela que abre -> Boundary Scan -> Initialize Chain na barra superior (verde)
+- No primeiro, selecionar arquivo do código, no segundo bypass
+- Depois, em Enviar para a placa
+
+### Configuração de Ambiente em Casa
+Para o passo a passo da configuração do simulador de FPGA Quartus Prime, ir para o [ANEXO A](#anexo-a), que contém as figuras do processo de instalação desse software.
 
 ### Teste de Sanidade
 Uma vez que ficou estabelecido o passo a passo de como ligar a placa e realizar checagem de sintaxe, compilação, atrelamento de pinagem e testes, tentamos rodar um código simples de uma estrutura básica de ALU, sem sucesso.
@@ -43,9 +72,9 @@ Uma vez que ficou estabelecido o passo a passo de como ligar a placa e realizar 
 Após várias tentativas de refazer esse código, pensamos em um teste de sanidade para testar a conexão da placa com o programa e nossa capacidade de escrever códigos funcionais em VHDL, seguimos com o projeto.
 
 > Abaixo um GIF indicando o sucesso do teste
-![Alt Text](./images/working_sanity_test.gif)
+<video src='https://raw.githubusercontent.com/umjourje/EEL480-Laboratorio_de_Sistemas_Digitais-2023.1/main/images/WhatsApp%20Video%202023-07-04%20at%204.11.45%20PM.mp4' width=180/>
 
-Abaixo o código que foi testado com sucesso
+Abaixo o código que foi testado com sucesso. Seu objetivo era replicar nos LEDs as entradas dos 4 switches.
 
 ```vhdl
 library IEEE;
@@ -72,12 +101,24 @@ end Behavioral;
 
 ## Projeto
 Ideia geral de projeto
+### O que é uma ALU?
 
-## Modularizacao
+
+### Quais operações?
+
+
+### Quais são nossas entradas e saídas?
+### Mapeamento de cada operação para o código binário de cada operação
+
+
+## Modularização
 separacao logica de componentes a serem reutilizados
 
 ## Unindo tudo
 como juntamos todos os modelos necessarios para o funcionamento de acordo com o projeto
 
-## Simulacao
+## Simulação
 Quartus prime em casa para rodar os codigod VHDL e checar a sintaxe.
+
+
+## Anexo A
