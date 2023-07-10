@@ -72,7 +72,7 @@ Uma vez que ficou estabelecido o passo a passo de como ligar a placa e realizar 
 Após várias tentativas de refazer esse código, pensamos em um teste de sanidade para testar a conexão da placa com o programa e nossa capacidade de escrever códigos funcionais em VHDL, seguimos com o projeto.
 
 > Abaixo um GIF indicando o sucesso do teste
-<video src='https://raw.githubusercontent.com/umjourje/EEL480-Laboratorio_de_Sistemas_Digitais-2023.1/main/images/WhatsApp%20Video%202023-07-04%20at%204.11.45%20PM.mp4' width=180/>
+<video src='https://raw.githubusercontent.com/umjourje/EEL480-Laboratorio_de_Sistemas_Digitais-2023.1/main/images/working_sanity_test.mp4' width=180/>
 
 Abaixo o código que foi testado com sucesso. Seu objetivo era replicar nos LEDs as entradas dos 4 switches.
 
@@ -106,13 +106,21 @@ Ideia geral de projeto
 
 ### Quais operações?
 
-
 ### Quais são nossas entradas e saídas?
+> Entradas: 
+X := Número binário de 4 bits
+Y := Número binário de 4 bits
+Cin := Número binário de 1 bit
+
+> Saídas:
+- 4 flags (1 bit): zero, negativo, overflow, cout
+Y := Número binário de 4 bits
 ### Mapeamento de cada operação para o código binário de cada operação
 
 
 ## Modularização
 separacao logica de componentes a serem reutilizados
+![HA](./images/half_adders-full_adder.jpeg)
 
 ## Unindo tudo
 como juntamos todos os modelos necessarios para o funcionamento de acordo com o projeto
