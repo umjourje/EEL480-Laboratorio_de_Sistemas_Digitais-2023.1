@@ -9,18 +9,19 @@
 
 > Renan Carvalho Gomes
 
-## Conteudo
+## Conteúdo
 1. [Requisitos](#requisitos)
 1. [Primeiros Testes](#primeiros-testes)
 1. [Projeto](#projeto)
-1. [Modularizacao](#modularizacao)
-1. [Unindo Tudo](#unindo-tudo)
-1. [Simulacao](#simulacao)
+1. [Modularização](#modularização)
+1. [Simulação](#simulação)
+1. [Anexo A - Quartus passo a passo](#anexo-a)
 
 ## Requisitos
+Nessa seção está resumido os requisitos levantados pelo professor. [Nesse arquivo](https://drive.google.com/file/d/10McyMFGa_nt-QEZUU1d6XBJOWCV4qwds/view) está tudo bem descrito e organizado.
+
 ### Objetivo do trabalho:
-Os alunos devem desenvolver uma ULA (Unidade Lógica e Aritmética) de 4 bits e 8 operações,
-das quais 4 são obrigatórias e 4 escolhidas pelo trio.
+Os alunos devem desenvolver uma ULA (Unidade Lógica e Aritmética) de 4 bits e 8 operações, das quais 4 são obrigatórias e 4 escolhidas pelo trio.
 
 ### Especificações:
 - As operações a serem executadas na ULA devem selecionada por entradas de controle. O
@@ -46,7 +47,8 @@ Nessa seção apresentaremos os passos necessários para configurar os ambientes
 
 **Nome do Simulador: ISE Simulator (ISim)**
 [Link para site Xilinx](https://www.xilinx.com/products/design-tools/isim.html)
-> Abrir um porjeto novo
+
+> Abrir um projeto novo
 - Criar projeto sem template adicionando as características da placa;
     - Family: Spartan3AN 
     - Device: XC3S700AN
@@ -63,16 +65,16 @@ Nessa seção apresentaremos os passos necessários para configurar os ambientes
 - No Clicar em: Menu superior -> Tools -> Plan Ahead -> I/O Pin Planning (PlanAhead) - Pre-Synthesis -> Apertar YES -> Abre a telinha para mapear as portas de input/output com as da placa
 - Na coluna SITE, mapear os códigos dos itens na placa com os input / output Depois de mapear, volta pra tela normal;
 
-> Compilação 
-
+> Compilação
 - Voltar pra tela do código -> Configure Target Device -> (iMPACT)
 - Tela que abre -> Boundary Scan -> Initialize Chain na barra superior (verde)
 - No primeiro, selecionar arquivo do código, no segundo bypass
-- Depois, em Enviar para a placa
+- Depois, em Enviar para a placa com 'Send to FPGA'
 
 ### Configuração de Ambiente em Casa
 **Nome do Simulador: Quartus II Prime Lite**
 [Link para site Intel](https://fpgasoftware.intel.com/?edition=lite)
+
 Para o passo a passo da configuração do simulador de FPGA Quartus Prime, ir para o [ANEXO A](#anexo-a), que contém as figuras com explicação do processo de instalação desse software.
 
 ### Teste de Sanidade
@@ -168,4 +170,4 @@ Quartus prime em casa para rodar os codigos VHDL e checar a sintaxe.
 
 
 # Anexo A
-> colocar as fotos do passo a passo da instalação do quartus
+> MELHORAR AQUI - colocar as fotos do passo a passo da instalação do quartus
