@@ -81,8 +81,7 @@ Uma vez que ficou estabelecido o passo a passo de como ligar a placa e realizar 
 
 Após várias tentativas de refazer esse código, pensamos em um teste de sanidade para testar a conexão da placa com o programa e nossa capacidade de escrever códigos funcionais em VHDL, seguimos com o projeto.
 
-> Abaixo um vídeo indicando o sucesso do teste
-<video src='https://raw.githubusercontent.com/umjourje/EEL480-Laboratorio_de_Sistemas_Digitais-2023.1/main/images/working_sanity_test.mp4' width=180></video>
+[Link do vídeo indicando o sucesso do teste](https://raw.githubusercontent.com/umjourje/EEL480-Laboratorio_de_Sistemas_Digitais-2023.1/main/images/working_sanity_test.mp4)
 
 Abaixo o código que foi testado com sucesso. Seu objetivo era replicar nos LEDs as entradas dos 4 switches.
 
