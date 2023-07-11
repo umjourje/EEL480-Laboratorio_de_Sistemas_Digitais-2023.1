@@ -170,13 +170,17 @@ Quartus prime em casa para rodar os codigos VHDL e checar a sintaxe.
 
 
 # Anexo A
-1. Página inicial a partir do [link](https://fpgasoftware.intel.com/?edition=lite) fornecido.
+## 1. Página inicial a partir do [link](https://fpgasoftware.intel.com/?edition=lite) fornecido.
 ![landing-page](./images/Quartus%20Prime%20Tutorial/1-pagina_inicial.png)
-1. Clique na versão 20.1.1, como indicado na figura
+
+## 2. Clique na versão 20.1.1, como indicado na figura
 ![version-choice](./images/Quartus%20Prime%20Tutorial/2-filtrar_versao.png)
-1. Escolha o link de acordo com seu sistema operacional
-![os-choice](Quartus%20Prime%20Tutorial/3-escolher_so.png)
-1. Selecione a aba indicada na imagem para encontrar todos os arquivos que devem ser baixados
+
+## 3. Escolha o link de acordo com seu sistema operacional
+![os-choice](./images/Quartus%20Prime%20Tutorial/3-escolher_so.png)
+
+## 4. Selecione a aba indicada na imagem para encontrar todos os arquivos que devem ser baixados
 ![list-downloads](./images/Quartus%20Prime%20Tutorial/4-aba_individual.png)
-1. Faça o download dos arquivos indicados na figura
+
+## 5. Faça o download dos arquivos indicados na figura
 ![select-files](./images/Quartus%20Prime%20Tutorial/5-seleciona_programas.png)
