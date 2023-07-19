@@ -131,14 +131,16 @@ Para realizar o papel do contador que foi solicitado  no projeto, utilizou-se um
 ### Códigos das Operações
 
 **Mapeamento de cada operação para seu respectivo código binário**
-- Soma: **000**
-- Incremento de 1: **001**
-- Subtração de Complemento de 2: **010**
-- Troca de Sinal: **011**
-- Decremento de 1: **100**
-- Multiplicar por 2: **101**
-- AND: **110**
-- XOR: **111**
+| Operação | Código |
+|---|---|
+| Soma | **000** |
+| Subtração em Complemento de 2 | **001** |
+| Incremento de 1 | **010** |
+| Troca de Sinal |  **011** |
+| Decremento de 1 |  **100** |
+| Multiplicar por 2 | **101** |
+| AND | **110** |
+| XOR | **111** |
 
 ### Quais são nossas entradas e saídas?
 **Entradas:**
