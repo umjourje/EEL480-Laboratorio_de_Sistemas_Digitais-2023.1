@@ -120,8 +120,12 @@ ALU é um acrônimo para *Arithmetic Logic Unit*, um módulo que realiza diverso
 
 Para o desenvolvimento de uma CPU como a conhecemos, as operações mais básicas e essenciais para a estrutura funcional se materializar são realizadas pela ALU. E num pipeline ótimo, em 1 ciclo de clock.
 
+### Funcionamento de uma ALU em VHDL
 
-> MELHORAR AQUI
+O raciocínio por trás da ALU projetada vem da projeção de algumas operações aritméticas e lógicas que envolvem o uso de um módulo full adder para a maioria das operações escolhidas pelo grupo, estas citadas anteriormente no relatório(soma, incremento de 1, substração em complemento de 2, troca de sinal, decremento de 1, XOR, dobro e clear). É notório que há poucas que somente são necessário o uso de algumas portas lógicas para sua execução, sendo estas o caso de XOR e CLEAR.
+Com essa escolha, menos portas lógicas ou CI´s seriam usados, aumentando a complexidade da ALU.
+
+Dentro do circuito combinacional da ALU se fazem presentes duas entradas para números binários que seriam mudados a partir de um módulo contador disponibilizado e ao entrarem no sistema são direcionados conforme os números binários de controle respectivos para cada operação. As saídas do sistemas são tanto o resultado do sistema como também a apresentação de flags de estado para o resultado(zero, overflow, carry out e negativo).
 
 ### Códigos das Operações
 
@@ -131,9 +135,9 @@ Para o desenvolvimento de uma CPU como a conhecemos, as operações mais básica
 - Subtração de Complemento de 2: **010**
 - Troca de Sinal: **011**
 - Decremento de 1: **100**
-- OPERACAO AQUI: (XOR?) **101**
-- Multiplicar por 2: **110**
-- OPERACAO AQUI: (CLEAR?) **111**
+- Multiplicar por 2: **101**
+- AND: **110**
+- XOR: **111**
 
 ### Quais são nossas entradas e saídas?
 **Entradas:**
@@ -151,23 +155,24 @@ Para o desenvolvimento de uma CPU como a conhecemos, as operações mais básica
 
 ## Modularização
 
-Estrutura Interna e do módulo Somador Completo (Full Adder):
+### Estrutura Interna e do módulo Somador Completo (Full Adder):
 
 ![HA](./images/half_adders-full_adder.jpeg)
 
-Estrutura Interna e do Somador de 4 bits:
+
+### Estrutura Interna e do Somador de 4 bits:
 
 ![somador4bits](./images/Somador_4_BITS.png)
 
-Estrutura do Subtrator de 4 bits:
+### Estrutura do Subtrator de 4 bits:
 
 ![Subtrator4bits](./images/Subtrator_4_BITS.png)
 
-Estrutura do módulo Incremento de 1:
+### Estrutura do módulo Incremento de 1:
 
 ![incremento1](./images/Incremento_De_1.png)
 
-Estrutura do módulo Troca de sinal:
+### Estrutura do módulo Troca de sinal:
 
 ![TrocaDeSinal](./images/Troca_De_Sinal.png)
 
@@ -181,7 +186,8 @@ como juntamos todos os modelos necessarios para o funcionamento de acordo com o 
 [codigo-full-adder](./modulos/FullAdder.vhd)
 
 ## Simulação
-Logisim para gerar imagens de projeto
+Logisim para gerar imagens de projeto e testar módulos individualmente.
+
 Quartus prime em casa para rodar os codigos VHDL e checar a sintaxe.
 
 
