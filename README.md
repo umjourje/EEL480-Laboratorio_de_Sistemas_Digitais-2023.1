@@ -154,6 +154,9 @@ Para o desenvolvimento de uma CPU como a conhecemos, as operações mais básica
 Estrutura Interna e do módulo Somador Completo (Full Adder):
 ![HA](./images/half_adders-full_adder.jpeg)
 
+Estrutura Interna e do Somador de 4 bits:
+![somador4bits](./images/Somador_4_BITS.png)
+
 Estrutura do módulo Incremento de 1:
 ![incremento1](./images/incremento_1.jpeg)
 
