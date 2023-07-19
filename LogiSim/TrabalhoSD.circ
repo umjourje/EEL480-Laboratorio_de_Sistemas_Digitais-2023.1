@@ -174,10 +174,7 @@
       <a name="label" val="Y"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(330,110)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="Cin"/>
-    </comp>
+    <comp lib="0" loc="(330,110)" name="Constant"/>
     <comp lib="0" loc="(550,110)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -201,6 +198,11 @@
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="Overflow"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(550,190)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="1" loc="(330,150)" name="NOT Gate">
@@ -241,6 +243,12 @@
       <a name="label" val="Z"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(640,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Negativo"/>
+      <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(710,240)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -347,7 +355,7 @@
     <wire from="(480,420)" to="(480,510)"/>
     <wire from="(480,510)" to="(600,510)"/>
     <wire from="(490,150)" to="(490,270)"/>
-    <wire from="(490,150)" to="(550,150)"/>
+    <wire from="(490,150)" to="(540,150)"/>
     <wire from="(490,270)" to="(560,270)"/>
     <wire from="(500,140)" to="(500,250)"/>
     <wire from="(500,140)" to="(550,140)"/>
@@ -358,6 +366,9 @@
     <wire from="(520,120)" to="(520,210)"/>
     <wire from="(520,120)" to="(550,120)"/>
     <wire from="(520,210)" to="(560,210)"/>
+    <wire from="(540,150)" to="(540,170)"/>
+    <wire from="(540,150)" to="(550,150)"/>
+    <wire from="(540,170)" to="(640,170)"/>
     <wire from="(570,110)" to="(610,110)"/>
     <wire from="(580,550)" to="(580,620)"/>
     <wire from="(580,550)" to="(620,550)"/>
@@ -392,10 +403,7 @@
       <a name="label" val="X"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(230,220)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="Mais1"/>
-    </comp>
+    <comp lib="0" loc="(230,220)" name="Constant"/>
     <comp lib="0" loc="(230,300)" name="Ground"/>
     <comp lib="0" loc="(310,210)" name="Splitter">
       <a name="facing" val="west"/>
@@ -420,6 +428,11 @@
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="OverFlow"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(610,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(660,170)" name="Pin">
@@ -452,10 +465,7 @@
       <a name="label" val="X"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(230,220)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="Mais1"/>
-    </comp>
+    <comp lib="0" loc="(230,220)" name="Constant"/>
     <comp lib="0" loc="(230,300)" name="Ground"/>
     <comp lib="0" loc="(310,210)" name="Splitter">
       <a name="facing" val="west"/>
@@ -480,6 +490,11 @@
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="OverFlow"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(610,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(660,170)" name="Pin">
