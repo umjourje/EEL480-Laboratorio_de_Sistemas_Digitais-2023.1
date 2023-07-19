@@ -807,6 +807,54 @@
     <wire from="(380,170)" to="(390,170)"/>
     <wire from="(610,170)" to="(660,170)"/>
   </circuit>
+  <circuit name="MultiplicaPor2">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="MultiplicaPor2"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(260,130)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="X"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(330,110)" name="Ground"/>
+    <comp lib="0" loc="(550,110)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Z"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(550,130)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Negativo"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(550,150)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Zero"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(550,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Cout"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(550,190)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="OverFlow"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp loc="(550,110)" name="Somador4Bits"/>
+    <wire from="(260,130)" to="(280,130)"/>
+    <wire from="(280,130)" to="(280,150)"/>
+    <wire from="(280,130)" to="(330,130)"/>
+    <wire from="(280,150)" to="(330,150)"/>
+  </circuit>
   <vhdl name="HA">
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
