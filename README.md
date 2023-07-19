@@ -152,19 +152,29 @@ Para o desenvolvimento de uma CPU como a conhecemos, as operações mais básica
 ## Modularização
 
 Estrutura Interna e do módulo Somador Completo (Full Adder):
+
 ![HA](./images/half_adders-full_adder.jpeg)
 
 Estrutura Interna e do Somador de 4 bits:
+
 ![somador4bits](./images/Somador_4_BITS.png)
 
 Estrutura do Subtrator de 4 bits:
+
 ![Subtrator4bits](./images/Subtrator_4_BITS.png)
 
 Estrutura do módulo Incremento de 1:
+
 ![incremento1](./images/Incremento_De_1.png)
 
 Estrutura do módulo Troca de sinal:
+
 ![TrocaDeSinal](./images/Troca_De_Sinal.png)
+
+OBS: Perceba que os módulos acima são todos os módulos baseados no módulo do somador de 4 bits.
+É mostrada a parte interna do somador de 4 bits com 4 somadores completos e os demais módulos seriam eles representados
+a partir de um somador de 4 bits, isto é, o subtrator seria o somador de 4 bits com uma das entradas barrada e o com o 
+Cin = 1 constante.
 
 ### Unindo tudo
 como juntamos todos os modelos necessarios para o funcionamento de acordo com o projeto
