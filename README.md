@@ -128,9 +128,8 @@ Com essas escolhas de operações, pudemos reutilizar os módulos básicos, util
 
 Para realizar o papel do contador que foi solicitado  no projeto, utilizou-se um *testbench* no qual é possível alterar os valores das entradas do circuito e o valor da operação selecionada. 
 
-### Códigos das Operações
+### Mapeamento das Operações
 
-**Mapeamento de cada operação para seu respectivo código binário**
 | Operação | Código |
 |---|---|
 | Soma | **000** |
@@ -143,55 +142,68 @@ Para realizar o papel do contador que foi solicitado  no projeto, utilizou-se um
 | XOR | **111** |
 
 ### Quais são nossas entradas e saídas?
-**Entradas:**
-- X := Número binário de 4 bits
-- Y := Número binário de 4 bits
-- Cin := Número binário de 1 bit
-
-**Saídas:**
-- Z := Número binário de 4 bits
-- Zero (flag) := 1bit
-- Negativo (flag) := 1bit
-- Overflow (flag) := 1bit
-- Cout (flag) := 1bit
-
+| Identificador | Tipo | Definição |
+|---|---|
+| **X** | INPUT | Número binário de 4 bits |
+| **Y** | INPUT | Número binário de 4 bits |
+| **Cin** | INPUT | Número binário de 1 bit |
+| **Z** | OUTPUT | Número binário de 4 bits |
+| **Zero (Flag)** | OUTPUT | Número binário de 1 bit |
+| **Negativo (Flag)** | OUTPUT | Número binário de 1 bit |
+| **Overflow (Flag)** | OUTPUT | Número binário de 1 bit |
+| **Cout (Flag)** | OUTPUT | Número binário de 1 bit |
 
 ## Modularização
 
-### Estrutura Interna e do módulo Somador Completo (Full Adder):
+### Somador Completo - Estrutura Interna
+> Esse módulo faz a soma Bit a Bit e será usado como componente nos outros módulos.
 
-![HA](./images/half_adders-full_adder.jpeg)
+![interno_fa](./images/Full_Adder.png)
 
+### Soma - 4 Bits
+> Como pode ser observado, para realizar uma opeção de 4 bits, foram utilizados 4 dos módulos somadores apresentados acima, com cada entrada do vetor de Bits sendo atrelada à sua respectiva posição referente ao MSB.
 
-### Estrutura Interna e do Somador de 4 bits:
+![soma4bits](./images/Somador_4_BITS.png)
 
-![somador4bits](./images/Somador_4_BITS.png)
+### Subtração em Complemento de 2 - 4 Bits
+> Nessa implementação também podemos observar reutilização do módulo somador de 4 bits, que com uma simples mudança na entrada **Y** e **Cin** transforma a funcionalidade para a operação desejada.
 
-### Estrutura do Subtrator de 4 bits:
+![sub4bits](./images/Subtrator_4_BITS.png)
 
-![Subtrator4bits](./images/Subtrator_4_BITS.png)
+### Incremento de 1 - 4 Bits
+> Existe aqui também a reutilização do módulo somador de 4 bits. Para realizar a transformação existem duas opções: Zerar **Y** e colocar o **Cin** como 1 __OU__ Zerar o **Cin** e colocar **Y** como 1.
 
-### Estrutura do módulo Incremento de 1:
+![incrementa14bits](./images/Incremento_De_1.png)
 
-![incremento1](./images/Incremento_De_1.png)
+### Troca de Sinal - 4 Bits
+> Manipulando as entradas do somador com LSB do **Y** fixo em 1 e **Cin** fixo em 0, chegamos na operação esperada.
 
-### Estrutura do módulo Troca de sinal:
+![trocaSinal4bits](./images/Troca_De_Sinal.png)
 
-![TrocaDeSinal](./images/Troca_De_Sinal.png)
+### Decremento de 1 - 4 Bits
+> Também reutilizando o módulo Somador, LSB do **Y** fixo em 1 e totalmente negado, além de **Cin** fixo em 1
 
-OBS: Perceba que os módulos acima são todos os módulos baseados no módulo do somador de 4 bits.
-É mostrada a parte interna do somador de 4 bits com 4 somadores completos e os demais módulos seriam eles representados
-a partir de um somador de 4 bits, isto é, o subtrator seria o somador de 4 bits com uma das entradas barrada e o com o 
-Cin = 1 constante.
+![menos14bits](./images/Decremento_De_1.png)
 
-### Unindo tudo
-como juntamos todos os modelos necessarios para o funcionamento de acordo com o projeto
-[codigo-conpleto](./LogiSim/TrabalhoSD.circ)
+### Multiplicação por 2 - 4 Bits
+> 
+
+![multiplicaDois4bits](./images/)
+
+OBS.: As outras duas operações, AND e XOR, são executadas por portas lógicas simples e não achou-se necessário a explicação delas nesse contexto.
+
 
 ## Simulação
-Logisim para gerar imagens de projeto e testar módulos individualmente.
+O programa LogiSim foi utilizado para gerar as imagens de projeto e testar módulos individualmente.
 
-Quartus prime em casa para rodar os codigos VHDL e checar a sintaxe.
+O Quartus Prime foi utilizado checar a sintaxe ao longo das diversas tentativas de desenvolvimento.
+
+Na pasta __LogiSim__ está o [código completo](./LogiSim/TrabalhoSD.circ) do projeto executado no LogiSim.
+
+No [arquivo](./modulos/ALU.vhd) estão as implementações a serem rodadas no ISim.
+
+Como não tivemos mais aulas de laboratório para a validação do funcionamento do arquivo acima, foi gerado um [arquivo](./modulos/testbench.vhd) de *testbench* que foi validado com um [simulador online](https://www.edaplayground.com/) de VHDL.
+
 
 
 # Anexo A
