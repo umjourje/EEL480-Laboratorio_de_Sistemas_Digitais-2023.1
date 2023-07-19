@@ -158,13 +158,13 @@ Estrutura Interna e do Somador de 4 bits:
 ![somador4bits](./images/Somador_4_BITS.png)
 
 Estrutura do Subtrator de 4 bits:
-![somador_subtrator](./images/Subtrator_4_BITS.png)
+![Subtrator4bits](./images/Subtrator_4_BITS.png)
 
 Estrutura do módulo Incremento de 1:
 ![incremento1](./images/Incremento_De_1.png)
 
 Estrutura do módulo Troca de sinal:
-![incremento1](./images/Troca_De_Sinal.png)
+![TrocaDeSinal](./images/Troca_De_Sinal.png)
 
 ### Unindo tudo
 como juntamos todos os modelos necessarios para o funcionamento de acordo com o projeto
