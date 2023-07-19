@@ -122,10 +122,11 @@ Para o desenvolvimento de uma CPU como a conhecemos, as operações mais básica
 
 ### Funcionamento de uma ALU em VHDL
 
-O raciocínio por trás da ALU projetada vem da projeção de algumas operações aritméticas e lógicas que envolvem o uso de um módulo full adder para a maioria das operações escolhidas pelo grupo, estas citadas anteriormente no relatório(soma, incremento de 1, substração em complemento de 2, troca de sinal, decremento de 1, XOR, dobro e clear). É notório que há poucas que somente são necessário o uso de algumas portas lógicas para sua execução, sendo estas o caso de XOR e CLEAR.
-Com essa escolha, menos portas lógicas ou CI´s seriam usados, aumentando a complexidade da ALU.
+O raciocínio por trás da ALU projetada vem da projeção de algumas operações aritméticas e lógicas que envolvem o uso de um módulo full adder para a maioria das operações escolhidas pelo grupo, estas que serão citadas posteriormente no relatório: soma, incremento de 1, subtração em complemento de 2, troca de sinal, decremento de 1, dobro, AND e XOR.
 
-Dentro do circuito combinacional da ALU se fazem presentes duas entradas para números binários que seriam mudados a partir de um módulo contador disponibilizado e ao entrarem no sistema são direcionados conforme os números binários de controle respectivos para cada operação. As saídas do sistemas são tanto o resultado do sistema como também a apresentação de flags de estado para o resultado(zero, overflow, carry out e negativo).
+Com essas escolhas de operações, pudemos reutilizar os módulos básicos, utilizando assim menos portas lógicas ou CI's, o que diminui a complexidade da ALU. Para ser possível a reutilização foram manipulados os valores de entrada dos operandos e da Flag **Cin**, de forma que todas as operações foram convertidas em operações de soma, excetuando-se as operações Bit a Bit AND e XOR.
+
+Para realizar o papel do contador que foi solicitado  no projeto, utilizou-se um *testbench* no qual é possível alterar os valores das entradas do circuito e o valor da operação selecionada. 
 
 ### Códigos das Operações
 
@@ -183,7 +184,7 @@ Cin = 1 constante.
 
 ### Unindo tudo
 como juntamos todos os modelos necessarios para o funcionamento de acordo com o projeto
-[codigo-full-adder](./modulos/FullAdder.vhd)
+[codigo-conpleto](./LogiSim/TrabalhoSD.circ)
 
 ## Simulação
 Logisim para gerar imagens de projeto e testar módulos individualmente.
