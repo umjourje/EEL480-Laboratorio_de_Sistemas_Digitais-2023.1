@@ -1,4 +1,5 @@
 # EEL480 - Relatório do Projeto de Laboratório de Sistemas Digitais - 2023.1
+[Link do Repositório](https://github.com/umjourje/EEL480-Laboratorio_de_Sistemas_Digitais-2023.1)
 
 ## Integrantes
 > Aline Capucho
@@ -186,9 +187,9 @@ Para realizar o papel do contador que foi solicitado  no projeto, utilizou-se um
 ![menos14bits](./images/Decremento_De_1.png)
 
 ### Multiplicação por 2 - 4 Bits
-> 
+> Por fim também utilizando o somador 4 bits, **Cin** é fixo em 0 e o valor de **Y** é o mesmo fornecido em **X**.
 
-![multiplicaDois4bits](./images/)
+![multiplicaDois4bits](./images/Multiplica_por_2.png)
 
 OBS.: As outras duas operações, AND e XOR, são executadas por portas lógicas simples e não achou-se necessário a explicação delas nesse contexto.
 
