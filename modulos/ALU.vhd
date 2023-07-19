@@ -55,6 +55,10 @@ begin
     x WHEN (OP = "101") ELSE
     "0000";
 
+  -- o valor de x deve ser invertido, o que equivale ao complemento de 1 de x
+  s_x <= NOT(x) WHEN (OP = "011") ELSE
+  x;
+
   s_r(0) <= s_x(3) XOR s_y(3) XOR s_cin;
   
   s_r(1) <= s_x(2) XOR s_y(2) XOR c1;
